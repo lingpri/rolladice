@@ -4,6 +4,8 @@ define(function (require) {
     // like:
     var dice = require('./dice');
   
-
     console.log(dice.create(10,10,60,60));
+    dice.rollit();
+
+    
 });

@@ -3,10 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Roll A Dice</title>
+
+	<script data-main="js/main" src="js/require.js"></script>
+	
+
 </head>
 
 
-<body onload="generateAllDices()">
+<body >
 
 
 
@@ -17,84 +21,7 @@
 
 </canvas>
 
-<script type="text/javascript">
 
-
-			function generateAllDices() {
-				makeRectangle();
-				generateDice();
-
-			}
-
-			function makeRectangle() {
-
-				  var x = 10;
-				  var y = 10;
-
-				 
-				var canvas = document.getElementById('dice');
-				if (canvas.getContext){
-					    var ctx = canvas.getContext('2d');
-					    var rectangle = new Path2D();
-					    rectangle.rect(x,y, 60,60);
-					    ctx.stroke(rectangle);
-				}
-				  
-			}
-		
-			function generateDice()  {
-
-				var canvas = document.getElementById('dice');
-
-				if (canvas.getContext){
-
-				    var ctx = canvas.getContext('2d');
-				    
-				    var circle = new Path2D();
-
-				    //top left circle
-				    circle.moveTo(20,25);
-				    circle.arc(20,25,5,0,Math.PI*2,true); 
-
-				     //middle left circle
-				    circle.moveTo(20,40);
-				    circle.arc(20,40,5,0,Math.PI*2,true); 
-
-				     //middle left circle
-				    circle.moveTo(40,40);
-				    circle.arc(40,40,5,0,Math.PI*2,true); 
-
-
-				    
-	  		        //bottom left circle
-				    //
-				    circle.moveTo(20,55);
-    				circle.arc(20,55,5,0,Math.PI*2,true);
-
-    				//top right circle
-				    //
-				    circle.moveTo(65,25);
-				    circle.arc(60,25,5,0,Math.PI*2,true); 
-
-
-				    //middle right circle
-				     circle.moveTo(65,40);
-				     circle.arc(60,40,5,0,Math.PI*2,true); 
-
-				    //bottom right circle
-				    //
-				    circle.moveTo(65,55);
-				    circle.arc(60,55,5,0,Math.PI*2,true); 
-				  
-				    //ctx.stroke(rectangle);
-				    ctx.fill(circle);
-  				}
-				
-			}
-			
-	
-</script>
-	
 </body>
 </html>
 
